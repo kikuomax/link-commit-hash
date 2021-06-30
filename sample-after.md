@@ -1,0 +1,1 @@
+The initial commit: [#f1433174bc39fa37e7179d6aecfac420d415f34c](https://github.com/kikuomax/link-commit-hash/commit/f1433174bc39fa37e7179d6aecfac420d415f34c).
