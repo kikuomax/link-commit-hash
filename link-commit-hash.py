@@ -54,7 +54,7 @@ def process_markdown(markdown_path, owner, project):
 
 if __name__ == '__main__':
     arg_parser = argparse.ArgumentParser(
-        description='Replaces Git commit hashes with markdown links',
+        description='Replaces Git commit hashes and issue numbers with markdown links',
     )
     arg_parser.add_argument(
         '--owner',
