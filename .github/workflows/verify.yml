@@ -1,0 +1,23 @@
+name: verify
+on:
+  push:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.7", "3.8", "3.9", "3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setting up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Verify conversion
+        run: python link-commit-hash.py --owner kikuomax --project link-commit-hash sample.md | diff - sample-after.md
+      - name: Verify no conversion of processed outputs
+        run: python link-commit-hash.py --owner kikuomax --project link-commit-hash sample-after.md | diff - sample-after.md
