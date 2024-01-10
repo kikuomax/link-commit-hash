@@ -4,7 +4,7 @@ A simple Python script that replaces commit hashes and issue numbers in a markdo
 
 ## Prerequisites
 
-Python 3.6 or later.
+Python 3.7 or later.
 
 ## How to use
 
