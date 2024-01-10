@@ -2,7 +2,8 @@ name: verify
 on:
   push:
   pull_request:
-    - branches: main
+    branches:
+      - main
 
 jobs:
   verify:
